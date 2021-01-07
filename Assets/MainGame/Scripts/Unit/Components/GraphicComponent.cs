@@ -16,8 +16,6 @@ public class GraphicComponent : BaseComponent
 	public List<StateNameToAnimationReference> statesAndAnimations = new List<StateNameToAnimationReference>();
 	public List<AnimationTransition> transitions = new List<AnimationTransition>(); // Alternately, an AnimationPair-Animation Dictionary (commented out) can be used for more efficient lookups.
 
-	[SpineBone(dataField: "skeletonAnimation")]
-	public string aimBone;
 	public Camera Camera;
 
 	[System.Serializable]
