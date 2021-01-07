@@ -1,0 +1,55 @@
+
+Weapon_4.4.2_bullet.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+b
+  rotate: true
+  xy: 353, 13
+  size: 105, 73
+  orig: 105, 73
+  offset: 0, 0
+  index: -1
+e1
+  rotate: false
+  xy: 661, 80
+  size: 22, 38
+  orig: 22, 38
+  offset: 0, 0
+  index: -1
+e2
+  rotate: false
+  xy: 637, 79
+  size: 22, 39
+  orig: 22, 39
+  offset: 0, 0
+  index: -1
+e3
+  rotate: true
+  xy: 685, 97
+  size: 21, 13
+  orig: 21, 13
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 590, 73
+  size: 45, 45
+  orig: 49, 49
+  offset: 2, 2
+  index: -1
+r
+  rotate: false
+  xy: 2, 2
+  size: 349, 116
+  orig: 349, 116
+  offset: 0, 0
+  index: -1
+t
+  rotate: false
+  xy: 428, 80
+  size: 160, 38
+  orig: 160, 38
+  offset: 0, 0
+  index: -1
