@@ -14,6 +14,11 @@ public enum UnitState
     Dead
 }
 
+public enum UnitAction
+{
+    Attack
+}
+
 public class Unit : MonoBehaviour
 {
     [SerializeField]
@@ -46,7 +51,6 @@ public class Unit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
         Tick();
     }
 
@@ -72,7 +76,7 @@ public class Unit : MonoBehaviour
         return (T)Components.Find(item => item.GetType().Equals(typeof(T)));
     }
 
-    public void NotifyEvent(UnitEvent unitEvent)
+    public void NotifyEvent(UnitAction unitAction)
     {
 
     }

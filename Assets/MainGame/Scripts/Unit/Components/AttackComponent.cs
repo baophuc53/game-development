@@ -6,11 +6,15 @@ using UnityEngine;
 
 public class AttackComponent : BaseComponent
 {
+	public Bullet bullet;
 	// Serial
 	public SkeletonAnimation skeletonAnimation;
 	[SpineBone(dataField: "skeletonAnimation")]
-	public string boneName;
-	public Camera cam;
+	public string aimTarget;
+	[SpineBone(dataField: "skeletonAnimation")]
+	public string aimRoot;
+
+	public Camera Camera;
 
 	[Header("Controls")]
 	public string AttackButton = "Fire1";
@@ -21,72 +25,62 @@ public class AttackComponent : BaseComponent
 
 	public Unit Target { get; set; }
 
-	private Bone bone;
+	private Bone boneAimTarget;
+	private Bone boneAimRoot;
 
 	void Start()
 	{
-		bone = skeletonAnimation.Skeleton.FindBone(boneName);
+		boneAimTarget = skeletonAnimation.Skeleton.FindBone(aimTarget);
+		boneAimRoot = skeletonAnimation.Skeleton.FindBone(aimRoot);
+		
 	}
 
-	public override void Tick()
+    private void Update()
+    {
+		
+	}
+
+    public override void Tick()
 	{
-		bool attack = Input.GetButton(AttackButton);
-		if (attack)
+		if (Input.GetButton(AttackButton))
 		{
 			if (Attack())
             {
-				Owner.NotifyEvent(UnitEvent.Attack);
+				Owner.NotifyEvent(UnitAction.Attack);
 			}
 		}
 	}
 
+	public Vector3 GetTargetPosition()
+    {
+		var mousePosition = Input.mousePosition;
+		return Camera.ScreenToWorldPoint(mousePosition);
+	}
+
 	public bool Attack()
     {
-		if (Target == null)
-        {
-			return true;
-        }
+		// Bullet --> Fire to mouse position
 
-		return false;
-    }
-
-	public void Aim()
-    {
-		if (Target == null)
-        {
-			return;
-        }
-
-		var targetPosition = Target.transform.position;
-		var worldPosition = cam.ScreenToWorldPoint(targetPosition);
-		var skeletonSpacePoint = skeletonAnimation.transform.InverseTransformPoint(worldPosition);
-
+		var skeletonSpacePoint = skeletonAnimation.transform.InverseTransformPoint(GetTargetPosition());
 		skeletonSpacePoint.x *= skeletonAnimation.Skeleton.ScaleX;
 		skeletonSpacePoint.y *= skeletonAnimation.Skeleton.ScaleY;
 
-        bone.SetLocalPosition(skeletonSpacePoint);
+		boneAimTarget.SetLocalPosition(skeletonSpacePoint);
 
-        if (bone.X < 0)
-        {
-            skeletonAnimation.Skeleton.ScaleX = skeletonAnimation.Skeleton.ScaleX > 0 ? -1 : 1;
-        }
+		if (boneAimTarget.X < 0)
+		{
+			skeletonAnimation.Skeleton.ScaleX = skeletonAnimation.Skeleton.ScaleX > 0 ? -1 : 1;
+		}
+
+		var srcPosition = boneAimRoot.GetLocalPosition();
+		var desPosition = boneAimTarget.GetLocalPosition();
+		var detalPostion = desPosition - srcPosition;
+
+
+		//bullet.transform.position = srcPosition;
+		//bullet.Direction = desPosition;
+		//bullet.transform.position = srcPosition;
+
+		return true;
     }
-
-	//void Update()
-	//{
-	//	var mousePosition = Input.mousePosition;
-	//	var worldMousePosition = cam.ScreenToWorldPoint(mousePosition);
-	//	var skeletonSpacePoint = skeletonAnimation.transform.InverseTransformPoint(worldMousePosition);
-	//	skeletonSpacePoint.x *= skeletonAnimation.Skeleton.ScaleX;
-	//	skeletonSpacePoint.y *= skeletonAnimation.Skeleton.ScaleY;
-
-	//	//bone.SetLocalPosition(skeletonSpacePoint);
-
-	//	//print($"One: {bone.X} - {skeletonAnimation.Skeleton.ScaleX}");
-	//	//if (bone.X < 0)
-	//	//{
-	//	//	skeletonAnimation.Skeleton.ScaleX = skeletonAnimation.Skeleton.ScaleX > 0 ? -1 : 1;
-	//	//	print($"Two: {bone.X} - {skeletonAnimation.Skeleton.ScaleX}");
-	//	//}
-	//}
 }

@@ -48,6 +48,7 @@ public class MoveComponent : BaseComponent
     {
 		float dt = Time.deltaTime;
 		bool isGrounded = Controller.isGrounded;
+		print(isGrounded);
 		
 		// Dummy input.
 		input.x = Input.GetAxis(XAxis);

@@ -5573,6 +5573,125 @@ Transform:
   m_Father: {fileID: 1783118294}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &941236192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 941236196}
+  - component: {fileID: 941236195}
+  - component: {fileID: 941236194}
+  - component: {fileID: 941236193}
+  m_Layer: 0
+  m_Name: Spine GameObject (damage_Weapon_0.3.1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &941236193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941236192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 0}
+  initialSkinName: 
+  initialFlipX: 0
+  initialFlipY: 0
+  updateWhenInvisible: 3
+  separatorSlotNames: []
+  zSpacing: 0
+  useClipping: 1
+  immutableTriangles: 0
+  pmaVertexColors: 1
+  clearStateOnDisable: 0
+  tintBlack: 0
+  singleSubmesh: 0
+  fixDrawOrder: 0
+  addNormals: 0
+  calculateTangents: 0
+  maskInteraction: 0
+  maskMaterials:
+    materialsMaskDisabled: []
+    materialsInsideMask: []
+    materialsOutsideMask: []
+  disableRenderingOnOverride: 1
+  _animationName: idle
+  loop: 1
+  timeScale: 1
+--- !u!23 &941236194
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941236192}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 71420ba639f7317418031982e97b1049, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &941236195
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941236192}
+  m_Mesh: {fileID: 0}
+--- !u!4 &941236196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941236192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1121038817
 GameObject:
   m_ObjectHideFlags: 0
@@ -5762,11 +5881,11 @@ GameObject:
   - component: {fileID: 1783118294}
   - component: {fileID: 1783118293}
   - component: {fileID: 1783118292}
-  - component: {fileID: 1783118295}
   - component: {fileID: 1783118290}
+  - component: {fileID: 1783118295}
+  - component: {fileID: 1783118291}
   - component: {fileID: 1783118289}
   - component: {fileID: 1783118296}
-  - component: {fileID: 1783118291}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -5783,23 +5902,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1783118288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c2eca0deaa5cd448a8e6d60db342b44, type: 3}
+  m_Script: {fileID: 11500000, guid: 2435d576c7b7b6843895588653563f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 1783118292}
-  Controller: {fileID: 1783118293}
-  XAxis: Horizontal
-  YAxis: Vertical
-  JumpButton: Jump
+  bullet: {fileID: 0}
+  skeletonAnimation: {fileID: 465513984}
+  aimTarget: Aim_target
+  aimRoot: Aim_root
+  Camera: {fileID: 1121038819}
   AttackButton: Fire1
-  walkSpeed: 1.5
-  runSpeed: 7
-  gravityScale: 6.6
-  jumpSpeed: 25
-  minimumJumpDuration: 0.5
-  jumpInterruptFactor: 0.5
-  forceCrouchVelocity: 25
-  forceCrouchDuration: 0.5
+  damage: 10
 --- !u!114 &1783118290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5809,11 +5922,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1783118288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faead7b7f9d123844834d7f6ed4bd601, type: 3}
+  m_Script: {fileID: 11500000, guid: 3219e0fa21bca7048848971284988acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 1783118292}
-  hitPoints: 100
+  skeletonAnimation: {fileID: 465513984}
+  statesAndAnimations:
+  - stateName: idle
+    animation: {fileID: 11400000, guid: 9340876611e9d82478cff48c759a0efa, type: 2}
+  - stateName: run
+    animation: {fileID: 11400000, guid: 8a7dac723ed7e6a4f9259c19b5e315e7, type: 2}
+  - stateName: jump
+    animation: {fileID: 11400000, guid: b1a628e5a2edce0418590b196b0ff6f4, type: 2}
+  - stateName: rolling
+    animation: {fileID: 11400000, guid: fd22c4362da52ff44820ecb7aa2cda07, type: 2}
+  - stateName: crouch
+    animation: {fileID: 11400000, guid: 5456b65ac8b139347b4ee5fd9025558c, type: 2}
+  transitions: []
+  aimBone: Aim_target
+  Camera: {fileID: 1121038819}
 --- !u!114 &1783118291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5846,10 +5973,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Components:
-  - {fileID: 1783118295}
   - {fileID: 1783118290}
   - {fileID: 1783118289}
   - {fileID: 1783118296}
+  - {fileID: 1783118295}
 --- !u!143 &1783118293
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5893,15 +6020,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1783118288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2435d576c7b7b6843895588653563f06, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c2eca0deaa5cd448a8e6d60db342b44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 1783118292}
-  skeletonAnimation: {fileID: 465513984}
-  boneName: Aim_target
-  cam: {fileID: 1121038819}
+  Controller: {fileID: 1783118293}
+  XAxis: Horizontal
+  YAxis: Vertical
+  JumpButton: Jump
   AttackButton: Fire1
-  damage: 10
+  walkSpeed: 1.5
+  runSpeed: 7
+  gravityScale: 6.6
+  jumpSpeed: 25
+  minimumJumpDuration: 0.5
+  jumpInterruptFactor: 0.5
+  forceCrouchVelocity: 25
+  forceCrouchDuration: 0.5
 --- !u!114 &1783118296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5911,15 +6046,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1783118288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3219e0fa21bca7048848971284988acd, type: 3}
+  m_Script: {fileID: 11500000, guid: faead7b7f9d123844834d7f6ed4bd601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 1783118292}
-  skeletonAnimation: {fileID: 465513984}
-  statesAndAnimations: []
-  transitions: []
-  aimBone: Aim_target
-  Camera: {fileID: 1121038819}
+  hitPoints: 200
 --- !u!1 &1833740914
 GameObject:
   m_ObjectHideFlags: 0

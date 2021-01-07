@@ -1,0 +1,55 @@
+
+fire_Weapon_0.3.1.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fire_Weapon_0.3.1_0
+  rotate: true
+  xy: 200, 173
+  size: 209, 137
+  orig: 300, 300
+  offset: 15, 80
+  index: -1
+fire_Weapon_0.3.1_1
+  rotate: false
+  xy: 332, 2
+  size: 120, 169
+  orig: 300, 300
+  offset: 86, 59
+  index: -1
+fire_Weapon_0.3.1_2
+  rotate: false
+  xy: 2, 8
+  size: 186, 163
+  orig: 300, 300
+  offset: 17, 63
+  index: -1
+fire_Weapon_0.3.1_3
+  rotate: false
+  xy: 2, 334
+  size: 188, 167
+  orig: 300, 300
+  offset: 25, 60
+  index: -1
+fire_Weapon_0.3.1_4
+  rotate: false
+  xy: 2, 173
+  size: 196, 159
+  orig: 300, 300
+  offset: 31, 67
+  index: -1
+fire_Weapon_0.3.1_5
+  rotate: true
+  xy: 190, 18
+  size: 153, 140
+  orig: 300, 300
+  offset: 107, 79
+  index: -1
+glow
+  rotate: false
+  xy: 192, 488
+  size: 13, 13
+  orig: 15, 15
+  offset: 1, 1
+  index: -1
