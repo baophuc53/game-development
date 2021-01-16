@@ -1,4 +1,5 @@
 ﻿using Spine.Unity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,35 +13,36 @@ public enum BulletType
 
 public class Bullet : MonoBehaviour
 {
-    #region Field Declarations
-
     public SkeletonAnimation skeletonAnimation;
+    public Rigidbody2D rigidBody2D;
     public BulletType bulletType = BulletType.Normal;
-    public float speed = 10f;
-    public Vector2 Direction { get; set; }
-
-    #endregion
+    public float Speed { get; set;}
+    public float Flightiness { get; set;}
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidBody2D = GetComponent<Rigidbody2D>();
+        skeletonAnimation = GetComponent<SkeletonAnimation>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Move();
+        if (transform.position.magnitude > Flightiness)
+        {
+            Finish();
+        }
     }
 
-    private void Move()
+    private void Finish()
     {
-        transform.Translate(Direction * Time.deltaTime * speed, Space.World);
-        var position = transform.position;
+        PoolManager.ReleaseObject(this.gameObject);
+    }
 
-        if (position.x < 0 && position.x > Screen.width || position.y < 0 || position.y > Screen.height)
-        {
-            Destroy(gameObject);
-        }
+    public void Launch(Vector2 direction)
+    {
+        var position = transform.position;
+        rigidBody2D.AddForce(direction * Speed);
+        //transform.Translate(direction * Time.deltaTime * speed, Space.World);
     }
 }

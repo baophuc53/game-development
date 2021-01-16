@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Unit))]
 public class BaseComponent : MonoBehaviour
 {
-    public Unit Owner;
+    public Unit Owner { get; private set; }
 
+    public bool Enabled { get => enabled; set => enabled = value; }
 
-    private bool _enabled = true;
-    public bool Enabled { get => _enabled; set => _enabled = value; }
-
-    public virtual void Tick()
+    private void Awake()
     {
+        InitComponents();
+    }
+
+    public virtual void InitComponents()
+    {
+        Owner = gameObject.GetComponent<Unit>();
     }
 }

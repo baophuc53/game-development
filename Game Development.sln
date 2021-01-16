@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity-examples", "spine-unity-examples.csproj", "{3ACE2CD4-B0FD-77BD-9CAC-165B14BBBA05}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity", "spine-unity.csproj", "{0DE10F9D-E346-8039-F6CB-104C69DC67E8}"
@@ -8,8 +8,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{58867686-99F6-140C-1EAC-4A9BF86719B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity-editor", "spine-unity-editor.csproj", "{463802F3-2DFA-DA99-3C0D-F4579A7653DB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{2C833CC6-AE8A-A3C2-32C6-4325C2EBFDBD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity-examples-editor", "spine-unity-examples-editor.csproj", "{900836E8-3B5E-537A-4E7F-206DBC5F75DE}"
 EndProject
@@ -35,10 +33,6 @@ Global
 		{463802F3-2DFA-DA99-3C0D-F4579A7653DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{463802F3-2DFA-DA99-3C0D-F4579A7653DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{463802F3-2DFA-DA99-3C0D-F4579A7653DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C833CC6-AE8A-A3C2-32C6-4325C2EBFDBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C833CC6-AE8A-A3C2-32C6-4325C2EBFDBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C833CC6-AE8A-A3C2-32C6-4325C2EBFDBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C833CC6-AE8A-A3C2-32C6-4325C2EBFDBD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{900836E8-3B5E-537A-4E7F-206DBC5F75DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{900836E8-3B5E-537A-4E7F-206DBC5F75DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{900836E8-3B5E-537A-4E7F-206DBC5F75DE}.Release|Any CPU.ActiveCfg = Release|Any CPU

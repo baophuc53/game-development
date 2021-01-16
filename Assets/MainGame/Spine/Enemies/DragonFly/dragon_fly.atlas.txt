@@ -1,0 +1,447 @@
+
+dragon_fly.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Shockwave_01_ef_gun
+  rotate: false
+  xy: 226, 161
+  size: 179, 179
+  orig: 179, 179
+  offset: 0, 0
+  index: -1
+box_L
+  rotate: false
+  xy: 811, 90
+  size: 71, 73
+  orig: 71, 73
+  offset: 0, 0
+  index: -1
+box_R
+  rotate: false
+  xy: 854, 165
+  size: 71, 73
+  orig: 71, 73
+  offset: 0, 0
+  index: -1
+box_head_L
+  rotate: true
+  xy: 407, 161
+  size: 195, 162
+  orig: 195, 162
+  offset: 0, 0
+  index: -1
+box_head_R
+  rotate: false
+  xy: 720, 165
+  size: 132, 135
+  orig: 132, 135
+  offset: 0, 0
+  index: -1
+brain
+  rotate: false
+  xy: 571, 112
+  size: 81, 76
+  orig: 81, 76
+  offset: 0, 0
+  index: -1
+brain_light
+  rotate: true
+  xy: 950, 90
+  size: 73, 61
+  orig: 121, 113
+  offset: 24, 25
+  index: -1
+bridge
+  rotate: 270
+  xy: 568, 9
+  size: 36, 56
+  orig: 36, 56
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_1
+  rotate: false
+  xy: 98, 455
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_10
+  rotate: false
+  xy: 801, 31
+  size: 63, 57
+  orig: 63, 57
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_11
+  rotate: false
+  xy: 626, 31
+  size: 65, 54
+  orig: 65, 54
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_12
+  rotate: false
+  xy: 249, 41
+  size: 64, 44
+  orig: 64, 44
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_13
+  rotate: false
+  xy: 2, 25
+  size: 57, 43
+  orig: 57, 43
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_14
+  rotate: false
+  xy: 402, 363
+  size: 57, 39
+  orig: 57, 39
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_15
+  rotate: false
+  xy: 315, 22
+  size: 54, 36
+  orig: 54, 36
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_16
+  rotate: false
+  xy: 196, 161
+  size: 23, 36
+  orig: 23, 36
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_2
+  rotate: false
+  xy: 201, 199
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_3
+  rotate: true
+  xy: 733, 2
+  size: 29, 31
+  orig: 29, 31
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_4
+  rotate: true
+  xy: 477, 5
+  size: 39, 38
+  orig: 39, 38
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_5
+  rotate: false
+  xy: 371, 15
+  size: 44, 43
+  orig: 44, 43
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_6
+  rotate: false
+  xy: 136, 20
+  size: 49, 50
+  orig: 49, 50
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_7
+  rotate: false
+  xy: 80, 19
+  size: 54, 51
+  orig: 54, 51
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_8
+  rotate: false
+  xy: 189, 31
+  size: 58, 54
+  orig: 58, 54
+  offset: 0, 0
+  index: -1
+ef_acid_spit_green_9
+  rotate: false
+  xy: 866, 30
+  size: 61, 55
+  orig: 61, 55
+  offset: 0, 0
+  index: -1
+ef_electric
+  rotate: false
+  xy: 2, 135
+  size: 223, 333
+  orig: 242, 333
+  offset: 19, 0
+  index: -1
+ef_fire
+  rotate: false
+  xy: 435, 415
+  size: 39, 53
+  orig: 39, 53
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_1
+  rotate: false
+  xy: 69, 421
+  size: 27, 47
+  orig: 27, 47
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_10
+  rotate: true
+  xy: 884, 87
+  size: 76, 64
+  orig: 76, 64
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_11
+  rotate: false
+  xy: 111, 72
+  size: 76, 64
+  orig: 76, 64
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_12
+  rotate: false
+  xy: 2, 70
+  size: 76, 64
+  orig: 76, 64
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_13
+  rotate: true
+  xy: 928, 165
+  size: 74, 62
+  orig: 74, 62
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_14
+  rotate: false
+  xy: 2, 300
+  size: 29, 60
+  orig: 29, 60
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_15
+  rotate: false
+  xy: 80, 75
+  size: 27, 58
+  orig: 27, 58
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_16
+  rotate: true
+  xy: 417, 31
+  size: 27, 58
+  orig: 27, 58
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_2
+  rotate: false
+  xy: 444, 8
+  size: 29, 21
+  orig: 29, 21
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_3
+  rotate: false
+  xy: 950, 30
+  size: 60, 58
+  orig: 60, 58
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_4
+  rotate: false
+  xy: 359, 404
+  size: 74, 64
+  orig: 74, 64
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_5
+  rotate: false
+  xy: 859, 398
+  size: 76, 66
+  orig: 76, 66
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_6
+  rotate: false
+  xy: 436, 91
+  size: 77, 68
+  orig: 77, 68
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_7
+  rotate: false
+  xy: 732, 95
+  size: 77, 68
+  orig: 77, 68
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_8
+  rotate: true
+  xy: 859, 240
+  size: 77, 67
+  orig: 77, 67
+  offset: 0, 0
+  index: -1
+ef_impact_smoke_9
+  rotate: true
+  xy: 859, 319
+  size: 77, 67
+  orig: 77, 67
+  offset: 0, 0
+  index: -1
+engine_L
+  rotate: false
+  xy: 654, 87
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+engine_R
+  rotate: true
+  xy: 732, 33
+  size: 60, 67
+  orig: 60, 67
+  offset: 0, 0
+  index: -1
+fan_streaks
+  rotate: false
+  xy: 2, 362
+  size: 65, 106
+  orig: 140, 140
+  offset: 73, 18
+  index: -1
+glasses_head
+  rotate: false
+  xy: 571, 190
+  size: 147, 166
+  orig: 147, 166
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 693, 51
+  size: 34, 34
+  orig: 34, 34
+  offset: 0, 0
+  index: -1
+guns
+  rotate: false
+  xy: 226, 388
+  size: 131, 80
+  orig: 131, 80
+  offset: 0, 0
+  index: -1
+head_back
+  rotate: false
+  xy: 720, 302
+  size: 137, 166
+  orig: 137, 166
+  offset: 0, 0
+  index: -1
+light_box_L
+  rotate: false
+  xy: 626, 6
+  size: 21, 23
+  orig: 21, 23
+  offset: 0, 0
+  index: -1
+light_led
+  rotate: false
+  xy: 2, 139
+  size: 28, 11
+  orig: 28, 17
+  offset: 0, 3
+  index: -1
+propeller_L
+  rotate: false
+  xy: 337, 60
+  size: 152, 29
+  orig: 152, 29
+  offset: 0, 0
+  index: -1
+propeller_R
+  rotate: false
+  xy: 189, 87
+  size: 146, 31
+  orig: 146, 31
+  offset: 0, 0
+  index: -1
+rotary_L
+  rotate: false
+  xy: 517, 9
+  size: 49, 25
+  orig: 49, 25
+  offset: 0, 0
+  index: -1
+rotary_R
+  rotate: false
+  xy: 187, 7
+  size: 39, 22
+  orig: 39, 22
+  offset: 0, 0
+  index: -1
+screws_L
+  rotate: false
+  xy: 417, 4
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+screws_R
+  rotate: false
+  xy: 69, 402
+  size: 11, 17
+  orig: 11, 17
+  offset: 0, 0
+  index: -1
+shadow_light_gold
+  rotate: true
+  xy: 342, 97
+  size: 62, 92
+  orig: 62, 92
+  offset: 0, 0
+  index: -1
+sub_angine_L
+  rotate: false
+  xy: 249, 12
+  size: 46, 27
+  orig: 46, 27
+  offset: 0, 0
+  index: -1
+sub_angine_R
+  rotate: false
+  xy: 693, 6
+  size: 38, 25
+  orig: 38, 25
+  offset: 0, 0
+  index: -1
+tube
+  rotate: true
+  xy: 499, 37
+  size: 74, 125
+  orig: 74, 125
+  offset: 0, 0
+  index: -1
+wing_L
+  rotate: false
+  xy: 226, 347
+  size: 174, 39
+  orig: 174, 39
+  offset: 0, 0
+  index: -1
+wing_R
+  rotate: false
+  xy: 189, 120
+  size: 151, 39
+  orig: 151, 39
+  offset: 0, 0
+  index: -1
