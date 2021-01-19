@@ -22,11 +22,14 @@ public class Unit : MonoBehaviour
 
     #endregion
 
-    public bool IsAttack { get; set; }
-
     private void Awake()
     {
         Controller = gameObject.GetComponent<CharacterController>();
         AnimationHandler = gameObject.GetComponent<AnimationHandler>();
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("OnCollisionEnter");
     }
 }

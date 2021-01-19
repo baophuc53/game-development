@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Unit))]
+[RequireComponent(typeof(TargetController))]
 public class Gun : BaseComponent
 {
     public SkeletonAnimation skeletonAnimation;
-
     [SpineBone(dataField: "skeletonAnimation")]
     public string targetBoneName;
     [SpineBone(dataField: "skeletonAnimation")]
@@ -25,10 +25,10 @@ public class Gun : BaseComponent
 
     [Header("LogicData")]
     public float damage = 10;
-    public float bulletSpeed = 500;
+    public float bulletSpeed = 100;
     public float bulletFlightiness = 200;
 
-    public Camera Camera;
+    private Camera Camera;
 
     private float lastShootTime;
 
@@ -45,35 +45,29 @@ public class Gun : BaseComponent
         bulletSpawnBone = skeletonAnimation.Skeleton.FindBone(bulletSpawnBoneName);
         aimRootBone = skeletonAnimation.Skeleton.FindBone(aimRootBoneName);
         firePointBone = skeletonAnimation.Skeleton.FindBone(firePointBoneName);
+        Camera = Camera.main;
+        this.Enabled = false;
     }
 
     private void Update()
     {
-        HandleFocusTarget();
-    }
+        int sign = 1;
 
-    protected virtual void HandleFocusTarget()
-    {
-        var mousePosition = Input.mousePosition;
-        var worldMousePosition = Camera.ScreenToWorldPoint(mousePosition);
-        var skeletonSpacePoint = skeletonAnimation.transform.InverseTransformPoint(worldMousePosition);
-        skeletonSpacePoint.x *= skeletonAnimation.Skeleton.ScaleX;
-        skeletonSpacePoint.y *= skeletonAnimation.Skeleton.ScaleY;
-        targetBone.SetLocalPosition(skeletonSpacePoint);
-    }
+        if (gameObject.CompareTag(ObjectTag.ENEMY))
+        {
+            sign = -1;
+        }
 
-    private void FixedUpdate()
-    {
-        if (targetBone.X < 0)
+        if (sign * targetBone.X < 0)
         {
             skeletonAnimation.Skeleton.ScaleX = skeletonAnimation.Skeleton.ScaleX > 0 ? -1 : 1;
             return;
         }
-        
+
         HandleAttack();
     }
 
-    protected virtual void HandleAttack()
+    public void HandleAttack()
     {
         var currentTime = Time.time;
         if (currentTime - lastShootTime > shootInterval)
@@ -83,7 +77,6 @@ public class Gun : BaseComponent
             lastShootTime = currentTime;
 
             var spawnPosition = firePointBone.GetWorldPosition(transform);
-
             var srcPosition = aimRootBone.GetWorldPosition(transform);
             var desPosition = targetBone.GetWorldPosition(transform);
             var direction = (desPosition - srcPosition).normalized;

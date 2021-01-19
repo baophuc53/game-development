@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3ACE2CD4-B0FD-77BD-9CAC-165B14BBBA05}</ProjectGuid>
+    <ProjectGuid>{4422D5C0-5316-E2D7-4E65-B6368F4B2F00}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>spine-unity-examples</AssemblyName>
@@ -64,7 +64,6 @@
     <Compile Include="Assets\Spine Examples\Scripts\SpineboyBodyTilt.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\SpawnFromSkeletonDataExample.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\Sample Components\SkeletonAnimationFixedTimestep.cs" />
-    <Compile Include="Assets\Spine Examples\Scripts\SpineboyFacialExpression.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\MaterialReplacementExample.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\Mix and Match Character Customize\EquipAssetExample.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\Sample Components\SetRigidbodySolverIterations.cs" />
@@ -705,7 +704,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="spine-unity.csproj">
-      <Project>{0DE10F9D-E346-8039-F6CB-104C69DC67E8}</Project>
+      <Project>{BDBE8827-E5AC-45C2-BE0F-0ADD53844481}</Project>
       <Name>spine-unity</Name>
     </ProjectReference>
   </ItemGroup>

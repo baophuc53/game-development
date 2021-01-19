@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{900836E8-3B5E-537A-4E7F-206DBC5F75DE}</ProjectGuid>
+    <ProjectGuid>{DCC819DD-CEB5-1325-A7B3-FB25296EDE7B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>spine-unity-examples-editor</AssemblyName>
@@ -622,11 +622,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="spine-unity.csproj">
-      <Project>{0DE10F9D-E346-8039-F6CB-104C69DC67E8}</Project>
+      <Project>{BDBE8827-E5AC-45C2-BE0F-0ADD53844481}</Project>
       <Name>spine-unity</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity-examples.csproj">
-      <Project>{3ACE2CD4-B0FD-77BD-9CAC-165B14BBBA05}</Project>
+      <Project>{4422D5C0-5316-E2D7-4E65-B6368F4B2F00}</Project>
       <Name>spine-unity-examples</Name>
     </ProjectReference>
   </ItemGroup>

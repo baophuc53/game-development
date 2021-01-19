@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{58867686-99F6-140C-1EAC-4A9BF86719B8}</ProjectGuid>
+    <ProjectGuid>{18A227F1-5C0F-ACA8-E1B1-82377BC58276}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,33 +57,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MainGame\Scripts\Utils\Singleton.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Unit\Character.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Enemy\EnemyBullet.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Unit\Components\Gun.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Unit\Components\CharacterInputHandler.cs" />
-    <Compile Include="Assets\MainGame\Scripts\StateMachine\StateMachine.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Enemy\Gunner.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Bullet\Bullet.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Unit\Unit.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Bullet\ObjectPool.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Unit\Components\BaseComponent.cs" />
-    <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyState.cs" />
-    <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyStates\EnemyIdleState.cs" />
-    <Compile Include="Assets\MainGame\Scripts\AnimationHandler\AnimationID.cs" />
+    <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyStates\EnemyFocusTargetState.cs" />
     <Compile Include="Assets\MainGame\Scripts\AnimationHandler\AnimationHandler.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Character\Character.cs" />
+    <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyStates\EnemyDeadState.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Components\Gun.cs" />
+    <Compile Include="Assets\MainGame\Scripts\GameController\GameController.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Components\CharacterInputHandler.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Enemy\Enemy.cs" />
+    <Compile Include="Assets\MainGame\Scripts\StateMachine\StateMachine.cs" />
     <Compile Include="Assets\MainGame\Scripts\Utils\EventManager\EventID.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Bullet\Bullet.cs" />
     <Compile Include="Assets\MainGame\Scripts\Utils\EventManager\EventManager.cs" />
     <Compile Include="Assets\MainGame\Scripts\Utils\ObjectPool\PoolManager.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Unit.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Bullet\ObjectPool.cs" />
     <Compile Include="Assets\MainGame\Scripts\Utils\ObjectPool\ObjectPoolContainer.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Components\BaseComponent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyState.cs" />
     <Compile Include="Assets\MainGame\Scripts\Utils\ObjectPool\ObjectPool.cs" />
+    <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyStates\EnemyIdleState.cs" />
     <Compile Include="Assets\MainGame\Scripts\CaneraController.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Enemy\Enemy.cs" />
-    <Compile Include="Assets\MainGame\Scripts\GameController\GameController.cs" />
-    <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyStates\EnemyFocusTargetState.cs" />
-    <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyStates\EnemyDeadState.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Enemy\EnemyState.cs" />
-    <Compile Include="Assets\MainGame\Scripts\AnimationHandler\AnimationLayer.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Enemy\AttackComponent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\GameConstant\ObjectTag.cs" />
+    <Compile Include="Assets\MainGame\Scripts\GameConstant\AnimationLayer.cs" />
+    <Compile Include="Assets\MainGame\Scripts\GameConstant\AnimationID.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Components\TargetController\EnemyTargetController.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Components\TargetController\TargetController.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Components\TargetController\CharacterTargetController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Spine\version.txt" />
@@ -720,19 +720,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="spine-unity-examples.csproj">
-      <Project>{3ACE2CD4-B0FD-77BD-9CAC-165B14BBBA05}</Project>
+      <Project>{4422D5C0-5316-E2D7-4E65-B6368F4B2F00}</Project>
       <Name>spine-unity-examples</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity.csproj">
-      <Project>{0DE10F9D-E346-8039-F6CB-104C69DC67E8}</Project>
+      <Project>{BDBE8827-E5AC-45C2-BE0F-0ADD53844481}</Project>
       <Name>spine-unity</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity-examples-editor.csproj">
-      <Project>{900836E8-3B5E-537A-4E7F-206DBC5F75DE}</Project>
+      <Project>{DCC819DD-CEB5-1325-A7B3-FB25296EDE7B}</Project>
       <Name>spine-unity-examples-editor</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity-editor.csproj">
-      <Project>{463802F3-2DFA-DA99-3C0D-F4579A7653DB}</Project>
+      <Project>{C6A2984A-BCD1-F2F2-14B2-CF69572C30EB}</Project>
       <Name>spine-unity-editor</Name>
     </ProjectReference>
   </ItemGroup>
