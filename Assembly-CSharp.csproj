@@ -84,6 +84,7 @@
     <Compile Include="Assets\MainGame\Scripts\Unit\Components\TargetController\EnemyTargetController.cs" />
     <Compile Include="Assets\MainGame\Scripts\Unit\Components\TargetController\TargetController.cs" />
     <Compile Include="Assets\MainGame\Scripts\Unit\Components\TargetController\CharacterTargetController.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Components\HitPointComponent.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Spine\version.txt" />

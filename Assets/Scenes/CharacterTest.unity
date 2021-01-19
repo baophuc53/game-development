@@ -137,7 +137,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 91762123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f4082d3021a0349849362a3401775b, type: 3}
+  m_Script: {fileID: 11500000, guid: d3af6348f4ff3b64eaa5a0482a3ea6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpSpeed: 25
+  MoveSpeed: 7
+  gravityScale: 6.6
+  Gun: {fileID: 91762129}
+  maxRange: 2000
+--- !u!114 &91762126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91762123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1750d388048fa1468f8d96b35744cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 131643166}
@@ -672,7 +689,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 644317403917007203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2728f228cfa19d4ab6243ffd9af0c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: fbd340fcae430654b9ec3906cec8c035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 644317403108617907}
@@ -806,4 +823,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8006690761394843199, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
+    - {fileID: 8006690761394843193, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
