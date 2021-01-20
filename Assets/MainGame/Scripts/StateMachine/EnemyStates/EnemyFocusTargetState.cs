@@ -10,13 +10,13 @@ public class EnemyFocusTargetState : EnemyState
     public override void Enter()
     {
         Owner.AnimationHandler.PlayAnimation(AnimationID.AIM_ON, AnimationLayer.AIM, false);
-        Owner.AttackComponent.Enabled = true;
+        Owner.Gun.Enabled = true;
     }
 
     public override void Exit()
     {
         Owner.AnimationHandler.PlayAnimation(AnimationID.AIM_OFF, AnimationLayer.AIM, false);
-        Owner.AttackComponent.Enabled = false;
+        Owner.Gun.Enabled = false;
     }
 
     public override void Update()

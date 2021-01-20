@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8006690761394843193}
   - component: {fileID: 8006690761394843198}
   - component: {fileID: 8006690761394843199}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   MoveSpeed: 7
   gravityScale: 6.6
   AttackComponent: {fileID: 8006690761394843199}
-  minDistanceToCharacter: 500
+  maxRange: 2000
 --- !u!114 &8006690761394843198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 8006690761661998975}
   - component: {fileID: 8006690761661998974}
   - component: {fileID: 8006690761661998969}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8006690762290819568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}

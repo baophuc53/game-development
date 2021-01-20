@@ -123,6 +123,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &91762123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8006690761394843192, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
+  m_PrefabInstance: {fileID: 8006690762719640298}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &91762124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91762123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3af6348f4ff3b64eaa5a0482a3ea6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpSpeed: 25
+  MoveSpeed: 7
+  gravityScale: 6.6
+  Gun: {fileID: 91762129}
+  maxRange: 2000
+--- !u!114 &91762126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91762123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1750d388048fa1468f8d96b35744cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 131643166}
+  targetBoneName: Aim_target
+--- !u!114 &91762129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91762123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2435d576c7b7b6843895588653563f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 131643166}
+  targetBoneName: Aim_target
+  bulletSpawnBoneName: fire_point
+  aimRootBoneName: Aim
+  firePointBoneName: fire_point
+  bulletPrefab: {fileID: 8403029900482739544, guid: 71db9360fa7a2e343b7b9186dbf24582, type: 3}
+  shootInterval: 3
+  damage: 10
+  bulletSpeed: 50
+  bulletFlightiness: 200
+--- !u!114 &131643166 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8006690761661998969, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
+  m_PrefabInstance: {fileID: 8006690762719640298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &537283158
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,11 +489,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65777740798500592, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: bulletSpeed
-      value: 1500
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 65777740798500592, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 3654973899697204531, guid: a1d09b056745bdf44a0caf7a6913e679, type: 3}
+    - target: {fileID: 65777740798500592, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: shootInterval
-      value: 0.4
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 65777740798500596, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: JumpSpeed
@@ -442,9 +515,21 @@ PrefabInstance:
       propertyPath: AnimationHandler
       value: 
       objectReference: {fileID: 644317403917007204}
+    - target: {fileID: 583396205697328154, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 583396205697328155, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 583396205700651255, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 583396205873364717, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 583396205990651360, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: m_LocalPosition.x
@@ -454,9 +539,33 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 583396205990651363, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 583396205990651420, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 583396206054686079, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 583396206056857130, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 583396206122657549, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 583396206320027873, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 583396206616415260, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 583396206782525896, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: m_RootOrder
@@ -464,11 +573,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 583396206782525896, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17
+      value: -27.1
       objectReference: {fileID: 0}
     - target: {fileID: 583396206782525896, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 583396206782525896, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: m_LocalPosition.z
@@ -507,8 +616,20 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 583396206782525902, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 583396206782525902, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 583396207039763863, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 583396207174936403, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee530cc6b5138b439f0e1c0666a5111, type: 3}
@@ -559,6 +680,20 @@ MonoBehaviour:
   - stateName: AimOff
     animation: {fileID: 11400000, guid: 2596edf4981eda64e8da867b1f3039d4, type: 2}
   transitions: []
+--- !u!114 &644317403917007210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644317403917007203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd340fcae430654b9ec3906cec8c035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 644317403108617907}
+  targetBoneName: Aim_target
 --- !u!1001 &8006690762719640298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -576,8 +711,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8006690761394843192, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8006690761394843193, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
+      propertyPath: Gun
+      value: 
+      objectReference: {fileID: 91762129}
     - target: {fileID: 8006690761394843193, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
       propertyPath: JumpSpeed
       value: 40
@@ -643,6 +782,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1221297915}
     - target: {fileID: 8006690761394843199, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
+      propertyPath: bulletSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006690761394843199, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8403029900482739544, guid: 71db9360fa7a2e343b7b9186dbf24582, type: 3}
+    - target: {fileID: 8006690761394843199, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
       propertyPath: shootInterval
       value: 3
       objectReference: {fileID: 0}
@@ -674,5 +821,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8006690761394843199, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
+    - {fileID: 8006690761394843193, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1dd8ae98f9ea75e4383b63bae77a0901, type: 3}
