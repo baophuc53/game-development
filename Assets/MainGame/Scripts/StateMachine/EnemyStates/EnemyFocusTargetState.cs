@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class EnemyFocusTargetState : EnemyState
+public class EnemyFocusTargetState : UnitState
 {
     public EnemyFocusTargetState(Enemy owner) : base(owner)
     {
@@ -9,13 +9,13 @@ public class EnemyFocusTargetState : EnemyState
     }
     public override void Enter()
     {
-        Owner.AnimationHandler.PlayAnimation(AnimationID.AIM_ON, AnimationLayer.AIM, false);
+        Owner.AnimationUtil.PlayAnimation(AnimationID.AIM_ON, AnimationLayer.AIM, false);
         Owner.Gun.Enabled = true;
     }
 
     public override void Exit()
     {
-        Owner.AnimationHandler.PlayAnimation(AnimationID.AIM_OFF, AnimationLayer.AIM, false);
+        Owner.AnimationUtil.PlayAnimation(AnimationID.AIM_OFF, AnimationLayer.AIM, false);
         Owner.Gun.Enabled = false;
     }
 

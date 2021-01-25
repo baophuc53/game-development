@@ -24,9 +24,8 @@ public class Gun : BaseComponent
     public float shootInterval = 0.25f;
 
     [Header("LogicData")]
-    public float damage = 10;
+    public int damage = 1;
     public float bulletSpeed = 100;
-    public float bulletFlightiness = 200;
 
     private Camera Camera;
 
@@ -72,7 +71,7 @@ public class Gun : BaseComponent
         var currentTime = Time.time;
         if (currentTime - lastShootTime > shootInterval)
         {
-            Owner.AnimationHandler.PlayAnimation(AnimationID.SHOOT, AnimationLayer.SHOOT, false);
+            Owner.AnimationUtil.PlayAnimation(AnimationID.SHOOT, AnimationLayer.SHOOT, false);
 
             lastShootTime = currentTime;
 
@@ -87,8 +86,7 @@ public class Gun : BaseComponent
                 bulletObject.transform.localRotation = Quaternion.Euler(0f, 0f, Mathf.Rad2Deg * (Mathf.Atan2(direction.y, direction.x)));
                 Bullet bullet = bulletObject.GetComponent<Bullet>();
                 bullet.Speed = bulletSpeed;
-                bullet.Flightiness = bulletFlightiness;
-
+                bullet.CarrayDamage = damage;
                 bullet.Launch(direction);
             }
         }

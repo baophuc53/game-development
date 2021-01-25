@@ -14,15 +14,17 @@ public enum BulletType
 public class Bullet : MonoBehaviour
 {
     public SkeletonAnimation skeletonAnimation;
-    public Rigidbody rigidBody;
+    
     public BulletType bulletType = BulletType.Normal;
+
     public float Speed { get; set;}
-    public float Flightiness { get; set;}
+    public int CarrayDamage { get; set; }
+
+    private float flightiness = 100;
     private Vector2 direction = default(Vector2);
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
-        rigidBody = GetComponent<Rigidbody>();
         skeletonAnimation = GetComponent<SkeletonAnimation>();
     }
 
@@ -30,7 +32,7 @@ public class Bullet : MonoBehaviour
     {
         transform.Translate(direction * Time.deltaTime * Speed, Space.World);
 
-        if (transform.position.magnitude > Flightiness)
+        if (transform.position.magnitude > flightiness)
         {
             Finish();
         }
@@ -44,10 +46,5 @@ public class Bullet : MonoBehaviour
     public void Launch(Vector2 direction)
     {
         this.direction = direction;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        
     }
 }

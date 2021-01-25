@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class CharacterInputHandler : MonoBehaviour
@@ -39,12 +39,12 @@ public class CharacterInputHandler : MonoBehaviour
 
 		if (inputShootStart)
         {
-			Character.OnShootBegin();
+			Character.OnShootBegan();
         }
 
 		if (inputShootEnd)
         {
-			Character.OnShootFinish();
+			Character.OnShootEnded();
         }
     }
 
@@ -107,23 +107,23 @@ public class CharacterInputHandler : MonoBehaviour
 		{
 			if (doCrouch)
 			{
-				Character.SetState(CharacterState.CROUCH);
+				Character.PlayAnimation(AnimationID.CROUCH);
 			}
 			else
 			{
 				if (input.x == 0)
 				{
-					Character.SetState(CharacterState.IDLE);
+					Character.PlayAnimation(AnimationID.IDLE);
 				}
 				else
 				{
-					Character.SetState(CharacterState.MOVING);
+					Character.PlayAnimation(AnimationID.RUN);
 				}
 			}
 		}
 		else
 		{
-			Character.SetState(CharacterState.JUMP);
+			Character.PlayAnimation(AnimationID.JUMP);
 		}
 	}
 }

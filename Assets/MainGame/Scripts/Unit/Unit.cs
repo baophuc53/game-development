@@ -7,11 +7,14 @@ using UnityEngine.Events;
 
 
 [RequireComponent(typeof(CharacterController))]
-[RequireComponent(typeof(AnimationHandler))]
-public class Unit : MonoBehaviour
+[RequireComponent(typeof(AnimationUtil))]
+public abstract class Unit : MonoBehaviour
 {
+    #region Components
     public CharacterController Controller { get; private set; }
-    public AnimationHandler AnimationHandler { get; private set; }
+    public AnimationUtil AnimationUtil { get; private set; }
+    #endregion
+
 
     #region Data
 
@@ -19,17 +22,42 @@ public class Unit : MonoBehaviour
     public float JumpSpeed = 25;
     public float MoveSpeed = 7f;
     public float gravityScale = 6.6f;
+    
+    public int maxHitPoint = 10;
 
+    private int currentHitPoint;
     #endregion
 
     private void Awake()
     {
-        Controller = gameObject.GetComponent<CharacterController>();
-        AnimationHandler = gameObject.GetComponent<AnimationHandler>();
+        InitComponents();
     }
 
-    public void OnCollisionEnter(Collision collision)
+    protected virtual void InitComponents()
     {
-        Debug.Log("OnCollisionEnter");
+        Controller = gameObject.GetComponent<CharacterController>();
+        AnimationUtil = gameObject.GetComponent<AnimationUtil>();
+        currentHitPoint = maxHitPoint;
     }
+
+    public void OnTakenDamage(int damage)
+    {
+        currentHitPoint -= damage;
+        if (currentHitPoint <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Bullet bullet = other.GetComponent<Bullet>();
+
+        if (other.CompareTag(GetOpponentBulletTag()))
+        {
+            OnTakenDamage(bullet.CarrayDamage);
+        }
+    }
+
+    protected abstract string GetOpponentBulletTag();
 }

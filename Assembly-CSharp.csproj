@@ -58,13 +58,12 @@
   <ItemGroup>
     <Compile Include="Assets\MainGame\Scripts\Utils\Singleton.cs" />
     <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyStates\EnemyFocusTargetState.cs" />
-    <Compile Include="Assets\MainGame\Scripts\AnimationHandler\AnimationHandler.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Utils\AnimationUtil.cs" />
     <Compile Include="Assets\MainGame\Scripts\Unit\Character\Character.cs" />
     <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyStates\EnemyDeadState.cs" />
     <Compile Include="Assets\MainGame\Scripts\Unit\Components\Gun.cs" />
     <Compile Include="Assets\MainGame\Scripts\GameController\GameController.cs" />
     <Compile Include="Assets\MainGame\Scripts\Unit\Components\CharacterInputHandler.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Unit\Enemy\Enemy.cs" />
     <Compile Include="Assets\MainGame\Scripts\StateMachine\StateMachine.cs" />
     <Compile Include="Assets\MainGame\Scripts\Utils\EventManager\EventID.cs" />
     <Compile Include="Assets\MainGame\Scripts\Bullet\Bullet.cs" />
@@ -74,7 +73,6 @@
     <Compile Include="Assets\MainGame\Scripts\Bullet\ObjectPool.cs" />
     <Compile Include="Assets\MainGame\Scripts\Utils\ObjectPool\ObjectPoolContainer.cs" />
     <Compile Include="Assets\MainGame\Scripts\Unit\Components\BaseComponent.cs" />
-    <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyState.cs" />
     <Compile Include="Assets\MainGame\Scripts\Utils\ObjectPool\ObjectPool.cs" />
     <Compile Include="Assets\MainGame\Scripts\StateMachine\EnemyStates\EnemyIdleState.cs" />
     <Compile Include="Assets\MainGame\Scripts\CaneraController.cs" />
@@ -84,7 +82,10 @@
     <Compile Include="Assets\MainGame\Scripts\Unit\Components\TargetController\EnemyTargetController.cs" />
     <Compile Include="Assets\MainGame\Scripts\Unit\Components\TargetController\TargetController.cs" />
     <Compile Include="Assets\MainGame\Scripts\Unit\Components\TargetController\CharacterTargetController.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Unit\Components\HitPointComponent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Components\AnimationState.cs" />
+    <Compile Include="Assets\MainGame\Scripts\StateMachine\CharacterState\CharacterIdleState.cs" />
+    <Compile Include="Assets\MainGame\Scripts\StateMachine\UnitState.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Unit\Enemy\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Spine\version.txt" />

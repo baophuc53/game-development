@@ -2,15 +2,15 @@
 using UnityEngine;
 
 
-public class EnemyIdleState : EnemyState
+public class EnemyIdleState : UnitState
 {
     public EnemyIdleState(Enemy owner) : base(owner)
     {
-
     }
+
     public override void Enter()
     {
-        Owner.AnimationHandler.PlayAnimation(AnimationID.IDLE, AnimationLayer.DEFAULT, true);
+        Owner.AnimationUtil.PlayAnimation(AnimationID.IDLE, AnimationLayer.DEFAULT, true);
     }
 
     public override void Exit()

@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8006690761394843197}
   - component: {fileID: 8006690761394843196}
-  - component: {fileID: 8006690761394843193}
   - component: {fileID: 8006690761394843198}
-  - component: {fileID: 8006690761394843199}
+  - component: {fileID: 91762124}
+  - component: {fileID: 91762126}
+  - component: {fileID: 91762129}
   m_Layer: 9
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,23 +54,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.5, z: 0}
---- !u!114 &8006690761394843193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8006690761394843192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d04ffaf9571d8ca48b8e2a55796fe253, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  JumpSpeed: 25
-  MoveSpeed: 7
-  gravityScale: 6.6
-  AttackComponent: {fileID: 8006690761394843199}
-  maxRange: 2000
 --- !u!114 &8006690761394843198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +73,7 @@ MonoBehaviour:
   - stateName: Run
     animation: {fileID: 11400000, guid: 1577e877ee259634d83c32da2f6a318c, type: 2}
   - stateName: Shoot
-    animation: {fileID: 11400000, guid: 1f8af7a0c91797443b33e41b0abc662b, type: 2}
+    animation: {fileID: 11400000, guid: 5d53e3a0e8b91f349b83f91b8ab3eb94, type: 2}
   - stateName: AimOn
     animation: {fileID: 11400000, guid: 1f8af7a0c91797443b33e41b0abc662b, type: 2}
   - stateName: AimOff
@@ -97,7 +81,7 @@ MonoBehaviour:
   - stateName: Dead
     animation: {fileID: 11400000, guid: ff618200a172acb4293c676c767f2faf, type: 2}
   transitions: []
---- !u!114 &8006690761394843199
+--- !u!114 &91762124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,7 +90,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 8006690761394843192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4355a28c6f4ce434ca3e00139915e33e, type: 3}
+  m_Script: {fileID: 11500000, guid: d3af6348f4ff3b64eaa5a0482a3ea6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpSpeed: 25
+  MoveSpeed: 7
+  gravityScale: 6.6
+  maxHitPoint: 100
+  Gun: {fileID: 91762129}
+  maxRange: 2000
+--- !u!114 &91762126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8006690761394843192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1750d388048fa1468f8d96b35744cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 8006690761661998969}
+  targetBoneName: Aim_target
+--- !u!114 &91762129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8006690761394843192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2435d576c7b7b6843895588653563f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 8006690761661998969}
@@ -114,12 +130,10 @@ MonoBehaviour:
   bulletSpawnBoneName: fire_point
   aimRootBoneName: Aim
   firePointBoneName: fire_point
-  bulletPrefab: {fileID: 3654973899697204531, guid: a1d09b056745bdf44a0caf7a6913e679, type: 3}
-  shootInterval: 0.5
+  bulletPrefab: {fileID: 8403029900482739544, guid: 71db9360fa7a2e343b7b9186dbf24582, type: 3}
+  shootInterval: 3
   damage: 10
-  bulletSpeed: 500
-  bulletFlightiness: 200
-  Camera: {fileID: 0}
+  bulletSpeed: 50
 --- !u!1 &8006690761661998968
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8006690761661998968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.0000007, y: -2.0000002, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8006690762290819568}
@@ -173,7 +187,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0

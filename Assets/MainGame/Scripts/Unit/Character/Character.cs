@@ -4,77 +4,60 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum CharacterState
-{
-    IDLE,
-    MOVING,
-    JUMP,
-    CROUCH,
-    DEAD
-}
 
 [RequireComponent(typeof(CharacterController))]
 public class Character : Unit
 {
     #region Components
-    
-    [Header("Components")]
-    public Gun Gun;
-
+    public Gun Gun { get; private set; }
     #endregion
 
-    #region Events
-    public UnityAction Shoot;
-    public UnityAction Run;
-    public UnityAction Jump;
+    protected override void InitComponents()
+    {
+        base.InitComponents();
+        Gun = GetComponent<Gun>();
+    }
 
-    #endregion
 
-    public CharacterState CurrentState { get; private set; }
-
-    public void OnShootBegin()
+    public void OnShootBegan()
     {
         Gun.Enabled = true;
-        AnimationHandler.PlayAnimation(AnimationID.AIM_ON, AnimationLayer.AIM, false);
+        AnimationUtil.PlayAnimation(AnimationID.AIM_ON, AnimationLayer.AIM, false);
+
     }
 
-    public void OnShootFinish()
+    public void OnShootEnded()
     {
         Gun.Enabled = false;
-        AnimationHandler.PlayAnimation(AnimationID.AIM_OFF, AnimationLayer.AIM, false);
+        AnimationUtil.PlayAnimation(AnimationID.AIM_OFF, AnimationLayer.AIM, false);
     }
 
-    public void SetState(CharacterState newState)
+    public void PlayAnimation(string animationID)
     {
-        var preState = CurrentState;
-        CurrentState = newState;
+        var loop = true;
 
-        if (preState != newState)
-        {
-            OnStateChanged();
-        }
+        //switch (animationID)
+        //{
+        //    case AnimationID.RUN:
+        //        loop = true;
+        //        AnimationUtil.SetFlip(Controller.velocity.x);
+        //        break;
+
+        //    case AnimationID.IDLE:
+        //    case AnimationID.JUMP:
+        //        loop = true;
+        //        break;
+        //    case AnimationID.DEAD:
+        //    case AnimationID.CROUCH:
+        //        loop = false;
+        //        break;
+        //}
+
+        AnimationUtil.PlayAnimation(animationID, AnimationLayer.DEFAULT, loop);
     }
 
-    public void OnStateChanged()
+    protected override string GetOpponentBulletTag()
     {
-        switch (CurrentState)
-        {
-            case CharacterState.IDLE:
-                AnimationHandler.PlayAnimation(AnimationID.IDLE, AnimationLayer.DEFAULT, true);
-                break;
-            case CharacterState.MOVING:
-                AnimationHandler.SetFlip(Controller.velocity.x);
-                AnimationHandler.PlayAnimation(AnimationID.RUN, AnimationLayer.DEFAULT, true);
-                break;
-            case CharacterState.JUMP:
-                AnimationHandler.PlayAnimation(AnimationID.JUMP, AnimationLayer.DEFAULT, true);
-                break;
-            case CharacterState.CROUCH:
-                AnimationHandler.PlayAnimation(AnimationID.CROUCH, AnimationLayer.DEFAULT, true);
-                break;
-            case CharacterState.DEAD:
-                AnimationHandler.PlayAnimation(AnimationID.DEAD, AnimationLayer.DEFAULT, true);
-                break;
-        }
+        return ObjectTag.ENEMY_BULLET;
     }
 }

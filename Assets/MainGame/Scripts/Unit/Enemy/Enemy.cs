@@ -12,9 +12,9 @@ public class Enemy : Unit
     public float maxRange = 2000f;
 
     public StateMachine StateMachine { get; private set; }
-    public EnemyState IdleState { get; private set; }
-    public EnemyState FocusTargetState { get; private set; }
-    public EnemyState DeadState { get; private set; }
+    public UnitState IdleState { get; private set; }
+    public UnitState FocusTargetState { get; private set; }
+    public UnitState DeadState { get; private set; }
 
     private void Start()
     {
@@ -51,5 +51,11 @@ public class Enemy : Unit
     {
         return DistanceToCharacter() <= maxRange;
     }
+
+    protected override string GetOpponentBulletTag()
+    {
+        return ObjectTag.CHARACTERE_BULLET;
+    }
+
 
 }
